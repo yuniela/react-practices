@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import confetti from 'canvas-confetti';
 import './App.css'
-import React from 'react'
 import Square from './components/Square';
 import { TURNS } from './constants';
 import { checkWinnerFrom } from './logic/board';
@@ -26,7 +25,7 @@ const App = () => {
   }
 
   const resetGame = () => {
-    setBoard(useState(Array(9).fill(null)));
+    setBoard(Array(9).fill(null));
     setTurn(TURNS.X);
     setWinner(null);
     window.localStorage.removeItem('board');
@@ -54,6 +53,10 @@ const App = () => {
       setWinner(false);
     }
   }
+
+  useEffect(() => {
+    
+  }, []);
 
   return (
     <main className='board'>
