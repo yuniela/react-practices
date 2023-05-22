@@ -1,10 +1,11 @@
-import React from 'react'
+import FollowMouse from "./FollowMouse"
 
-const App = () => {
+
+function App () {
   return (
-    <div>
-      <h1>Proyecto 3</h1>
-    </div>
+    <main>
+      <FollowMouse />
+    </main>
   )
 }
 
